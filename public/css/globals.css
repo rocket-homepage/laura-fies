@@ -1,0 +1,192 @@
+@import "tailwindcss";
+/* Jakarta - 300*/
+@font-face {
+  font-display: swap; 
+  font-family: 'JakartaSans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/PlusJakartaSans-Light.woff2') format('woff2'); 
+}
+/* Jakarta - 400*/
+@font-face {
+  font-display: swap; 
+  font-family: 'JakartaSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/PlusJakartaSans-Regular.woff2') format('woff2'); 
+}
+/* Jakarta - 500*/
+@font-face {
+  font-display: swap; 
+  font-family: 'JakartaSans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/PlusJakartaSans-Medium.woff2') format('woff2'); 
+}
+/* outfit - 300*/
+@font-face {
+  font-display: swap; 
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Outfit-Light.woff2') format('woff2'); 
+}
+/* outfit - 400*/
+@font-face {
+  font-display: swap; 
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Outfit-Regular.woff2') format('woff2'); 
+}
+
+/* outfit - 500*/
+@font-face {
+  font-display: swap; 
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Outfit-Medium.woff2') format('woff2'); 
+}
+/* outfit - 600*/
+@font-face {
+  font-display: swap; 
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Outfit-SemiBold.woff2') format('woff2'); 
+}
+
+
+@theme  {
+   /* Colors */
+  --color-primary:#000000; 
+  --color-primary_1:#202020; 
+  --color-dark:#2A2A2A; /*dark bodey text*/
+  --color-white:#ffffff;
+   --color-body:#D8D8D8; /*off-white */
+  --color-grey: #666666;
+    --color-grey1: #989898; /*border*/
+
+
+/* spacing */
+  --spacing: 1px;
+  --spacing-space: clamp(3.125rem, 2.2416rem + 4.417vw, 6.25rem);
+
+ /* breakpoints */
+  --breakpoint-*: initial;
+ 
+  --breakpoint-xsm: 450px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xlg: 1024px;
+  --breakpoint-2xl: 1100px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1470px;
+ 
+  --container-*: initial;
+ 
+  --container-xsm: 450px;
+  --container-sm: 576px;
+  --container-md: 768px;
+  --container-lg: 992px;
+  --container-xlg: 1024px;
+  --container-2xl: 1100px;
+  --container-xl: 1280px;
+  --container-xxl: 1470px;
+
+ /* font-family */
+  --font-jakarta: 'JakartaSans', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+ 
+  /* font-size */
+  --text-h1: clamp(32px, 2vw + 1rem, 40px);
+  --text-h1--line-height: 1.5rem;
+  --text-h1--letter-spacing: 0;
+  --text-h1--font-weight: bold;
+
+  --text-h2: clamp(28px, 2vw + 1rem, 33px);
+  --text-h2--line-height: 1.5rem;
+  --text-h2--letter-spacing: 0;
+  --text-h2--font-weight: bold;
+
+   --text-h3: clamp(22px, 1.5vw, 28px);
+  --text-h3--line-height: 1.5rem;
+  --text-h3--letter-spacing: 0;
+
+  --text-h4: clamp(18px, 1.5vw, 23px);
+  --text-h4--line-height:1.5rem;
+  --text-h4--letter-spacing: 0;
+
+  --text-base: clamp(16px, 1.5vw, 18px);
+  --text-base--line-height: 1.5rem;
+  --text-base--letter-spacing: 0;
+
+  --text-base_sm: 16px;
+}
+
+
+
+@layer{
+  body{
+    @apply font-outfit
+  }
+   .container{
+        @apply mx-auto px-15
+    }
+    nav ul li a{
+      @apply relative before:content-[''] before:w-0 before:h-2 before:absolute before:-bottom-6 before:left-1/2 before:bg-primary before:opacity-0 before:invisible hover:before:w-full hover:before:right-0 hover:before:left-0 hover:before:opacity-100 hover:before:visible before:transition-all before:duration-500 before:ease-in-out
+    }
+    .btn-dark{
+      @apply block bg-primary text-white font-semibold font-outfit  px-24 py-12 border-2 border-solid border-primary w-fit
+      transition-all duration-500 ease-in-out hover:text-primary hover:bg-white;
+    }
+    .foot-col1 > ul li:first-child{
+      @apply flex justify-start items-center gap-8
+    }
+    .foot-col1 > ul li a{
+      @apply flex justify-start items-center gap-8
+    }
+    .swiper-button-prev, .swiper-button-next{
+      @apply relative z-10;
+    }
+}
+.swiper-button-prev{
+
+  width: 48px;
+  height:48px;
+  background-image: url("/images/Left-Arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left:-5%;
+  top:0%;
+      z-index: 10;
+}
+.swiper-button-next{
+
+  width: 48px;
+  height:48px;
+  background-image: url("/images/Right-Arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right:-5%;
+  top:0%;
+      z-index: 10;
+}
+.swiper-button-next svg,.swiper-button-prev svg{
+  opacity:0;
+}
+
+@media (max-width:768px){
+  .swiper-button-prev,  .swiper-button-next{
+    display:none !important;
+  }
+  .swiper-wrapper {
+    padding-bottom: 50px !important;
+}
+}
