@@ -20,7 +20,13 @@ const OffenStellen = (
                     <div className="container">
                         <div className="flex flex-col-reverse lg:flex-row gap-20 lg:gap-64 justify-center items-start xxl:items-center">
                             <div className="w-full lg:w-1/2 xxl:w-9/12 flex flex-col gap-32 ">
-
+                                <div className='mb-24'>
+                                    <div className="mb-24">
+                                        <h2 className="text-h2/snug font-normal font-jakarta" dangerouslySetInnerHTML={{ __html: Heading  }}>
+                                        </h2>
+                                    </div>
+                                    <div className='line max-w-225 w-full border-1 border-solid border-grey1'></div>
+                                </div>
                                 <div className="space-y-24 text-dark">
                                     {Description?.root.children &&
                                         Description?.root.children.length > 0 &&
@@ -41,23 +47,16 @@ const OffenStellen = (
                                             return <p key={index}>{child.children[0].text}</p>;
                                         })}
                                 </div>
-
-                            </div>
-                            <div className="w-full lg:w-1/2 xxl:w-full xxl:-mr-[calc((100vw-1470px)/2)] relative xl:sticky top-0">
-                                <div className='mb-24'>
-                                    <div className="mb-24">
-                                        <h2 className="text-h2/snug font-normal font-jakarta" dangerouslySetInnerHTML={{ __html: Heading  }}>
-                                        </h2>
-                                    </div>
-                                    <div className='line max-w-225 w-full border-1 border-solid border-grey1'></div>
-                                </div>
-                                <Image src={SideImage?.url}  alt="Bild des Abschnitts zu offenen Stellen" role="img" width={1920} height={900} fetchPriority="high" sizes="(max-width: 1024px) 100vw, 1920px" className="relative  xxl:relative  object-cover" />
                                 {
                                     BTN ?
                                         <Link href={BTN.url} aria-label="Kontaktieren Sie uns – Startseite" className="btn-dark block mt-24"><span>{BTN.label}</span></Link>
                                         :
                                         null
                                 }
+                            </div>
+                            <div className="w-full lg:w-1/2 xxl:w-full xxl:-mr-[calc((100vw-1470px)/2)] relative xl:sticky top-0">
+                                <Image src={SideImage?.url}  alt="Bild des Abschnitts zu offenen Stellen" role="img" width={1920} height={900} fetchPriority="high" sizes="(max-width: 1024px) 100vw, 1920px" className="relative  xxl:relative  object-cover" />
+                                
                             </div>
                         </div>
                     </div>

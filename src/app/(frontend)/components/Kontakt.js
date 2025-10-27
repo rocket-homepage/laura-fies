@@ -99,12 +99,12 @@ const Kontakt = ({
 
                                 <p >
                                     {FormHeading}
-                                    <Link href="#" className="font-semibold text-black underline">Datenschutzerklärung</Link>.
+                                    <Link href="/datenschutzerklaerung" className="font-semibold text-black underline">Datenschutzerklärung</Link>.
                                 </p>
 
 
                                 <button type="submit" className="!w-full btn-dark cursor-pointer" aria-label="Anfrage einreichen">
-                                    Anfrage Einreichen
+                                    Anfrage abschicken
                                 </button>
                             </form>
                         </div>
